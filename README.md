@@ -1,4 +1,0 @@
-ComunidadPython
-===============
-
-Código compartido

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Formulario de Ingreso{% endblock %}
+{% block body %}
+	<h2>Formulario de Ingreso</h2>
+	<section id='formu'>
+		<form action="" method="POST">
+				{% csrf_token %}
+				{{formul.as_p}}
+			<input type="submit" value="Enviar">
+		</form>	
+	</section>
+{% endblock %}

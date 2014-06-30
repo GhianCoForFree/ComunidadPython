@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Lista de Productos{% endblock %}
+{% block body %}
+	<h1>Estos son los productos disponibles</h1>
+	{% if productos %}
+		<table>
+				<tr class="principal">
+					<td>Nombre</td>
+					<td>Descripcion</td>
+				</tr>
+		{% for p in productos%}			
+				<tr>
+					<td>{{p.nombre}}</td>
+					<td>{{p.descripcion}}</td>
+				</tr>
+		{% endfor %}
+		</table>
+	{% else %}
+		<h2>No existen productos activos</h2>
+	{% endif %}
+{% endblock %}
